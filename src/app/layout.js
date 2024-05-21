@@ -3,13 +3,17 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Providers from "./Providers";
 import Navbar from "@/components/Navbar";
-
+import { ProxyAgent, setGlobalDispatcher } from "undici";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Imdb clone",
   description: "This is a movie database clone",
 };
+
+if (process.env.LOCAL_FETCH_PROXY) {
+  setGlobalDispatcher(new ProxyAgent(process.env.LOCAL_FETCH_PROXY));
+}
 
 export default function RootLayout({ children }) {
   return (
