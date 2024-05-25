@@ -13,7 +13,8 @@ function Card({ result }) {
           alt=""
           width={500}
           height={300}
-          className="sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300"
+          className="sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300 object-cover max-h-[300px]"
+          //   fill={true}
         ></Image>
         <div className="p-2">
           <p className="line-clamp-2 text-md">{result.overview}</p>

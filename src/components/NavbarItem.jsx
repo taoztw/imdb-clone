@@ -14,7 +14,7 @@ function NavbarItem({ title, param }) {
             ? "text-amber-600 underline decoration-4 underline-offset-8 decoration-amber-500 rounded-lg"
             : ""
         }`}
-        href={`?genre=${param} `}
+        href={`/?genre=${param} `}
       >
         {title}
       </Link>
